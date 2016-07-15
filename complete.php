@@ -1,9 +1,6 @@
 <?php
 require_once 'meekrodb.php';
-DB::$user = 'proposal';
-DB::$password = 'l;il2016';
-DB::$dbName = 'proposal';
-DB::$encoding = 'utf8';
+include_once 'config_inc.php';
 
 
 DB::query("SELCT * FROM accounts"); // misspelled SELECT
