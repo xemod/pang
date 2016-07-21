@@ -155,10 +155,10 @@
             <strong>ท่านได้ส่งข้อเสนอฯ เรื่องนี้ ไปแหล่งทุนอื่นด้วยหรือไม่? *</strong>
             <div class="radio">
               <label class="radio-inline">
-                  <input type="radio" value="0" name="sendother[]" id="sendother1" checked>ไม่
+                  <input type="radio" value="0" name="sendother" id="sendother1" checked>ไม่
               </label>
               <label class="radio-inline">
-                  <input type="radio" value="1" name="sendother[]" id="sendother2">ใช่
+                  <input type="radio" value="1" name="sendother" id="sendother2">ใช่
               </label>
             </div>
             <label>ถ้าใช่โปรดระบุหน่วยงาน</label>

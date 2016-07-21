@@ -1,9 +1,9 @@
 <?php
 require_once 'meekrodb.php';
-include_once 'config_inc.php';
+include_once 'config.inc.php';
 
 
-DB::query("SELCT * FROM accounts"); // misspelled SELECT
+//DB::query("SELCT * FROM accounts"); // misspelled SELECT
 ?>
 
 <pre>
