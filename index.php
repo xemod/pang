@@ -177,12 +177,12 @@
 
   			<div class="col-md-6">
   				<h3>ข้อมูลและการติดต่อ</h3>
-  				<p>
-              <span class="glyphicon glyphicon-ok-circle"></span> การส่งข้อเสนอโครงการ(proposal)ต้องกรอกฟอร์มขั้นตอนที่ 1,2 ให้เรียบร้อยก่อนส่ง<br>
-              <span class="glyphicon glyphicon-ok-circle"></span> ขนาดไฟล์ข้อเสนอฯ ไม่ควรเกิน <strong class="bg-warning"><span class="glyphicon glyphicon-floppy-disk"></span> 500kb</strong><br>
-              <span class="glyphicon glyphicon-warning-sign"></span> การส่งข้อเสนอโครงการจะสำเร็จเมื่่อท่านได้รับอีเมล์ตอบรับจากระบบเท่านั้น<br>
-              <span class="glyphicon glyphicon-warning-sign"></span> ข้อเสนอโครงการจะมีเลขประจำตัว(ID) เมื่อติดต่อกับผู้เกี่ยวข้องควรแจ้ง ID ทุกครั้งเพื่อความสะดวก<br>
-  				</p>
+  				<ul class="list-group">
+              <li class="list-group-item"><span class="glyphicon glyphicon-ok-circle"></span> การส่งข้อเสนอโครงการ(proposal)ต้องกรอกฟอร์มขั้นตอนที่ 1,2 ให้เรียบร้อยก่อนส่ง</li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-ok-circle"></span> ขนาดไฟล์ข้อเสนอฯ ไม่ควรเกิน <strong class="bg-warning"><span class="glyphicon glyphicon-floppy-disk"></span> 500kb</strong></li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-warning-sign"></span> การส่งข้อเสนอโครงการจะสำเร็จเมื่่อท่านได้รับอีเมล์ตอบรับจากระบบเท่านั้น</li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-warning-sign"></span> ข้อเสนอโครงการจะมีเลขประจำตัว(ID) เมื่อติดต่อกับผู้เกี่ยวข้องควรแจ้ง ID ทุกครั้งเพื่อความสะดวก</li>
+  				</ul>
           <div class="panel panel-warning">
               <div class="panel-heading"><span class="glyphicon glyphicon-warning-sign"></span> Warning!</div>
               <div class="panel-body"><p class="text-warning">สวรส. ขอสงวนสิทธิรับพิจารณาเฉพาะข้อเสนอโครงการที่มีรายละเอียดครบถ้วนสมบูรณ์ตามที่กำหนดไว้เท่านั้น</p>
