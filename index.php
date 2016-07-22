@@ -168,7 +168,7 @@
 
           <div class="form-group col-lg-12">
             <label>ไฟล์ข้อเสนอ *</label>
-            <input type="file" name="proposaldoc" class="form-control btn-primary" id="proposaldoc" accept=".doc,.docx,.odt" required >
+            <input type="file" name="proposaldoc" class="form-control" id="proposaldoc" accept=".doc,.docx,.odt" required >
           </div>
 
 

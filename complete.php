@@ -1,9 +1,18 @@
 <?php
 require_once 'meekrodb.php';
 include_once 'config.inc.php';
+
+DB::$error_handler = false; // since we're catching errors, don't need error handler
+DB::$throw_exception_on_error = true;
 if (!empty($_POST)){
   //populate name...
-  
+  $_POST['uploadname'] = "xxxx.docx";
+  try{
+      DB::insert('data', $_POST);
+  }catch(MeekroDBException $e) {
+    echo "Error: " . $e->getMessage() . "<br>\n"; // something about duplicate keys
+    echo "SQL Query: " . $e->getQuery() . "<br>\n"; // INSERT INTO accounts...
+  }
 }
 
 //DB::query("SELCT * FROM accounts"); // misspelled SELECT
