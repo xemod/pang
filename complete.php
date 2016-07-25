@@ -2,16 +2,31 @@
 require_once 'meekrodb.php';
 include_once 'config.inc.php';
 
+//Error checking
+$err = fale;
+
 DB::$error_handler = false; // since we're catching errors, don't need error handler
 DB::$throw_exception_on_error = true;
+
 if (!empty($_POST)){
-  //populate name...
-  $_POST['uploadname'] = "xxxx.docx";
+
+    $target_filename = "files/".$_POST["title"].".".$_FILES["proposaldoc"]["type"];
+
+
+    if(move_uploaded_file($_FILES["proposaldoc"]["tmp_name"],$target_filename)){
+      $_POST["uploadname"] = $target_filename;
+      $err = fals;//no error
+    }else {
+      $err = true;
+    }
+
+
+
   try{
-      DB::insert('data', $_POST);
+    DB::insert('data', $_POST);
   }catch(MeekroDBException $e) {
-    echo "Error: " . $e->getMessage() . "<br>\n"; // something about duplicate keys
-    echo "SQL Query: " . $e->getQuery() . "<br>\n"; // INSERT INTO accounts...
+    $err_message .= "Error: " . $e->getMessage() . "<br>\nข้อมูลซ้ำ..ตรวจสอบสถานะได้จาก email ของท่าน"; // something about duplicate keys
+    $err = true;
   }
 }
 
