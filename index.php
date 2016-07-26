@@ -147,7 +147,7 @@
           </div>
           <div class="form-group col-lg-12">
             <label>งบประมาณ *</label>
-            <input type="number" name="cost" class="form-control" id="cost" value=""  pattern="[0-9]{10}" required>
+            <input type="number" name="cost" class="form-control" id="cost" value=""  pattern="[0-9]{10}"  step="100" required>
           </div>
 
 
