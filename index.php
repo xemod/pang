@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>สวรส.ระบบรับข้อเสนอโครงการวิจัยในปีงบประมาณ 2560</title>
+  <title>สวรส.ระบบรับข้อเสนอโครงการวิจัยในปีงบประมาณ 2561</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="theme.css">
@@ -23,13 +23,13 @@
       <section class="container">
         <div class="page-header">
             <img class="img-responsive" src="logo.png" alt="hsri logo" width="435" height="75" />
-            <h2>โปรแกรมรับข้อเสนอโครงการปี 2560</h2>
+            <h2>โปรแกรมรับข้อเสนอโครงการปี 25601</h2>
         </div>
   		<div class="container-page">
         <div class="panel panel-info">
           <div class="panel-heading"><h3>ขั้นตอนที่ 1 </h3></div>
           <div class="panel-body">
-              <p>Download แบบฟอร์ม Proposal จากลิงก์ด้านล่าง กรอกข้อมูลในแบบฟอร์มให้เรียบร้อย แล้วอัพโหลดไฟล์  Proposal กลับเข้ามาในระบบพร้อมทั้งกรอกข้อมูลในแบบฟอร์มออนไลน์ขั้นตอนที่ 2 ให้เรียบร้อย
+              <p><strong class="text-warning">(ถ้าท่านเตรียมไฟล์มาเรียบแล้วแล้วข้ามไปขั้นตอนที่ 2)</strong> Download แบบฟอร์ม Proposal จากลิงก์ด้านล่าง กรอกข้อมูลในแบบฟอร์มให้เรียบร้อย แล้วอัพโหลดไฟล์  Proposal กลับเข้ามาในระบบพร้อมทั้งกรอกข้อมูลในแบบฟอร์มออนไลน์ขั้นตอนที่ 2 ให้เรียบร้อย
               </p>
                <a onclick="javascript:onDownload()" class="btn btn-info btn-lg" role="button">
                  <span class="glyphicon glyphicon-download"></span> Download form
@@ -42,7 +42,7 @@
   				<h3>ขั้นตอนที่ 2 รายละเอียดโครงการ<Small class="text-danger"> *กรอกข้อมูลให้ครบ</small></h3>
 
   				<div class="form-group col-lg-12">
-  					<label>ชื่อ-สกุล *</label>
+  					<label>ชื่อ-สกุล หัวหน้าโครงการ *</label>
   					<input type="text" name="name" class="form-control" id="name" value="" required>
   				</div>
 
@@ -57,8 +57,8 @@
   				</div>
 
   				<div class="form-group col-lg-6">
-  					<label>โทรศัพท์มือถือ * 08-xxxx-xxxx</label>
-  					<input type="text" name="mobilephone" class="form-control" id="mobilephone" value="" placeholder="รูปแบบ 08-xxxx-xxxx"  required>
+  					<label>โทรศัพท์มือถือ * 0x-xxxx-xxxx</label>
+  					<input type="text" name="mobilephone" class="form-control" id="mobilephone" value="" placeholder="รูปแบบ 0x-xxxx-xxxx"  required>
   				</div>
 
   				<div class="form-group col-lg-6">
@@ -79,45 +79,7 @@
             <input type="text" name="etitle" class="form-control" id="etitle" value=""  required>
           </div>
           <div class="form-group col-lg-12">
-            <label>ความสอดคล้องกับยุทธศาสตร์การวิจัยของชาติ *</label>
-            <input type="text" name="nationalplan" class="form-control" id="nationalplan"  placeholder="กรุณาเลือก..โปรดคลิก" list="naplan" required>
-            <datalist id="naplan">
-                <option value="ยุทธฯ 1 เร่งส่งเสริมการวิจัยและพัฒนาเพื่อให้บรรลุเป้าหมายและสนองตอบต่อประเด็นเร่งด่วนตามยุทธศาสตร์และแผนพัฒนาประเทศ และภารกิจของหน่วยงาน โดยรัฐลงทุนเพื่อการวิจัยและพัฒนาเพิ่มขึ้นอย่างต่อเนื่อง">
-                <option value="ยุทธฯ 2 ส่งเสริมและสนับสนุนการวิจัยและพัฒนาในภาคเอกชน">
-                <option value="ยุทธฯ 3 ส่งเสริมการนำกระบวนการวิจัย ผลงานวิจัย องค์ความรู้ นวัตกรรม และเทคโนโลยีจากงานวิจัยไปใช้ประโยชน์อย่างเป็นรูปธรรม โดยความร่วมมือของภาคส่วนต่างๆ">
-                <option value="ยุทธฯ 4 เร่งรัดพัฒนาระบบวิจัยของประเทศให้เข้มแข็ง เป็นเอกภาพ และยั่งยืน รวมถึงสร้างระบบนิเวศการวิจัยที่เหมาะสม">
-                <option value="ยุทธฯ 5 พัฒนาและเสริมสร้างความเข้มแข็งของโครงสร้างพื้นฐานด้านการวิจัยและพัฒนาของประเทศ">
-                <option value="ยุทธฯ 6 เพิ่มจำนวนและพัฒนาศักยภาพของบุคลากรด้านการวิจัยและพัฒนา เพื่อเพิ่มขีดความสามารถในการแข่งขันของประเทศ">
-                <option value="ยุทธฯ 7 พัฒนาความร่วมมือของเครือข่ายวิจัยในประเทศและระหว่างประเทศ">
-            </datalist>
-          </div>
-          <div class="form-group col-lg-12">
-            <label>ความสอดคล้องกับแผนงานสวรส. *</label>
-            <input type="text" name="hsriplan" class="form-control" id="hsriplan" placeholder="กรุณาเลือก..โปรดคลิก" list="hsplan" required>
-            <datalist id="hsplan">
-              <option value="1) แผนงานวิจัยและพัฒนาระบบยา">
-              <option value="2) แผนงานวิจัยระบบอภิบาลสุขภาพ">
-              <option value="3) แผนงานวิจัยและพัฒนาระบบบริการสุขภาพ">
-              <option value="4) แผนงานวิจัยและประเมินนโยบายสุขภาพ">
-              <option value="5) แผนงานสร้างเสริมสุขภาพคนพิการและผู้สูงอายุ">
-              <option value="6) แผนงานพัฒนาระบบข้อมูลข่าวสาร">
-              <option value="7) แผนงานวิจัยและพัฒนากำลังคนด้านสุขภาพ">
-              <option value="8) แผนงานพัฒนาระบบวิจัยการแพทย์แผนไทย">
-              <option value="9) แผนงานวิจัย Implementation research ด้านอุปกรณ์และเทคโนโลยีทางการแพทย์">
-              <option value="10) แผนงานวิจัยเพื่อการพัฒนาหลักประกันสุขภาพไทย">
-              <option value="11) แผนงาน Quality and Safety Research">
-            </datalist>
-          </div>
-          <div class="form-group col-lg-12">
-            <label>หลักการและเหตุผล *</label>
-            <textarea class="form-control custom-control" rows="2" name="reason" id="reason" required></textarea>
-          </div>
-          <div class="form-group col-lg-12">
-            <label>วัตถุประสงค์ *</label>
-            <textarea class="form-control custom-control" rows="2" name="objective" id="objective" required></textarea>
-          </div>
-          <div class="form-group col-lg-12">
-            <label>ประโยชน์ที่คาดว่าจะได้รับ(เลือกได้มากกว่า 1 ข้อ) *</label>
+            <label>ความสอดคล้องกับประเด็นวิจัย *(เลือกได้มากกว่า 1 ข้อ) *</label>
             <div class="checkbox">
               <label></label>
                   <input type="checkbox" value="1" name="return1" id="retrun1">1. ด้านนโยบาย
@@ -139,33 +101,6 @@
                   <input type="checkbox" value="1" name="return5" id="retrun5">5. ด้านวิชาการ
             </div>
           </div>
-
-          <div class="form-group  col-lg-12">
-            <label>ระยะเวลาการดำเนินงาน*</label>
-              <input name="doyear" class="form-control txtcard" placeholder="ปี" type="number" pattern="[0-9]{10}" required>
-              <input name="domonth" class="form-control txtcard" placeholder="เดือน" type="number" pattern="[0-9]{10}">
-          </div>
-          <div class="form-group col-lg-12">
-            <label>งบประมาณ *</label>
-            <input type="number" name="cost" class="form-control" id="cost" value=""  pattern="[0-9]{10}"  step="100" required>
-          </div>
-
-
-          <div class="form-group col-lg-12">
-            <strong>ท่านได้ส่งข้อเสนอฯ เรื่องนี้ ไปแหล่งทุนอื่นด้วยหรือไม่? *</strong>
-            <div class="radio">
-              <label class="radio-inline">
-                  <input type="radio" value="0" name="sendother" id="sendother1" checked>ไม่
-              </label>
-              <label class="radio-inline">
-                  <input type="radio" value="1" name="sendother" id="sendother2">ใช่
-              </label>
-            </div>
-            <label>ถ้าใช่โปรดระบุหน่วยงาน</label>
-              <input type="text" name="sendothertxt" class="form-control" id="sendothertxt" placeholder="ระบุหน่วนงาน">
-          </div>
-
-
           <div class="form-group col-lg-12">
             <label>ไฟล์ข้อเสนอ *</label>
             <input type="file" name="proposaldoc" class="form-control" id="proposaldoc" accept=".doc,.docx,.odt" required >
