@@ -38,7 +38,7 @@
         </div>
 
   			<div class="col-md-6 col-lg-6">
-          <form role="form" action="complete.php" method="post" enctype="multipart/form-data">
+          <form role="form" action="complete.php" method="post" enctype="multipart/form-data" id="proposalfm">
   				<h3>ขั้นตอนที่ 2 รายละเอียดโครงการ<Small class="text-danger"> *กรอกข้อมูลให้ครบ</small></h3>
 
   				<div class="form-group col-lg-12">
@@ -123,8 +123,8 @@
               <div class="panel-body"><p class="text-warning">สวรส. ขอสงวนสิทธิรับพิจารณาเฉพาะข้อเสนอโครงการที่มีรายละเอียดครบถ้วนสมบูรณ์ตามที่กำหนดไว้เท่านั้น</p>
               </div>
           </div>
-  				<button type="submit" class="btn btn-primary btn-lg">Send!</button>
-          <button type="reset" class="btn btn-default btn-lg">Reset Form</button>
+  				<button type="submit" id="i-submit" class="btn btn-primary btn-lg">ส่งข้อเสนอ!</button>
+          <button type="reset" class="btn btn-default btn-lg">ล้างข้อมูล</button>
   			</div>
   		</div>
     </from>
