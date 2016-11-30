@@ -58,7 +58,7 @@ if (!empty($_POST)){ //chk post var
       $strHeader .= "Content-type: text/html; charset=utf-8\r\n";
       $strHeader .= "From: no-reply@hsri.or.th";
       $strMess = "เราได้รับข้อเสนอโครงการ \"".$_POST["title"]."\" เรียบร้อยแล้ว<br>โปรดระบุรหัสด้านล่างเมื่อต้องการติดต่อ สวรส.<br><br>
-      code : <strong>".$code."</strong> <br> โทรศัพท์ 0-2832-9200 mail : hsri@hsri.or.th";
+      code : <strong>".$code."</strong> <br> สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางรัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th";
       mail($_POST['email'],$strSubject, $strMess, $strHeader);
     }
   }
@@ -68,7 +68,7 @@ if (!empty($_POST)){ //chk post var
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>สวรส.ระบบรับข้อเสนอโครงการวิจัยในปีงบประมาณ 2560</title>
+  <title>สวรส.ระบบรับข้อเสนอโครงการวิจัยในปีงบประมาณ 2561</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="theme.css">
@@ -85,7 +85,7 @@ if (!empty($_POST)){ //chk post var
       <section class="container">
         <div class="page-header">
             <img class="img-responsive" src="logo.png" alt="hsri logo" width="435" height="75" />
-            <h2>โปรแกรมรับข้อเสนอโครงการปี 2560</h2>
+            <h2>โปรแกรมรับข้อเสนอโครงการปี 2561</h2>
         </div>
       <div class="container-page">
         <div class="row">
@@ -125,7 +125,7 @@ if (!empty($_POST)){ //chk post var
   <br>
   <a class="up-arrow" href="#topPage" data-toggle="tooltip" title="TO TOP">
 <span class="glyphicon glyphicon-chevron-up"></span></a><br><br>
-  <p>ติดต่อ hsri@hsri.or.th โทรศัพท์ 0-2832-9200 แฟกซ์ 0-2832-9201</p>
+  <p>สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางรัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th</p>
   <p class="text-info">power by bootstrap</p>
 </footer>
 </section>
