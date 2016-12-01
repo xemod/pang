@@ -57,14 +57,16 @@ if (!empty($_POST)){ //chk post var
 if(!$err){
     $mail = new PHPMailer;
 
-    //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+    $mail->SMTPDebug = 3;                               // Enable verbose debug output
     $mail->CharSet = "utf-8";
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'mail.hsri.or.th';  // Specify main and backup SMTP servers
+    $mail->isSMTP();
+                                 // Set mailer to use SMTP
+    $mail->Host = 'imsa.hsri.or.th';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = false;                               // Enable SMTP authentication
-    $mail->Username = 'hsri';                 // SMTP username
-    $mail->Password = 'hsri8g1';                           // SMTP password
-    $mail->Port = 25;                                    // TCP port to connect to
+    //$mail->SMTPSecure = 'ssl';
+    $mail->Username = '';                 // SMTP username
+    $mail->Password = '';                           // SMTP password
+    $mail->Port = 26;                                    // TCP port to connect to
 
     $mail->setFrom('hsri@hsri.or.th');
     $mail->addAddress($_POST["email"]);     // Add a recipient
@@ -78,7 +80,7 @@ if(!$err){
 
     $mail->Subject = 'ท่านส่งข้อเสนอโครงการเรียบร้อยแล้ว';
     $mail->Body    = "เราได้รับข้อเสนอโครงการ \"".$_POST["title"]."\" เรียบร้อยแล้ว<br>โปรดระบุรหัสด้านล่างเมื่อต้องการติดต่อ สวรส.<br><br>
-    code : <strong>".$code."</strong> <br> สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางค์รัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th";
+    code : <strong>".$code."</strong> <br> สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางค์รัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th<br>has sumitted on ".$submittedtime;
     $mail->AltBody = "เราได้รับข้อเสนอโครงการ \"".$_POST["title"]."\" เรียบร้อยแล้ว โปรดระบุรหัส เมื่อต้องการติดต่อ สวรส.code : ".$code."  สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางค์รัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th";
 
     if(!$mail->send()) {
@@ -142,7 +144,7 @@ if(!$err){
                 </div>
               </div>
               <?php
-                }else {
+                }else{
               ?>
               <div class="panel panel-success">
                 <div class="panel-heading">ส่งข้อมูลสำเร็จ!!</div>
@@ -154,6 +156,7 @@ if(!$err){
                     <?php
                       echo $mess_mail;
                      ?>
+                     <br />submitted on <?$submittedtime?>
                   </p>
                 </div>
               </div>
