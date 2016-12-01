@@ -40,7 +40,7 @@ if (!empty($_POST)){ //chk post var
           //move no erroor insert database
           try{
             DB::insert('data', $_POST);
-            $submittedtime =
+            $submittedtime = date("Y-m-d h:i:sa");
           }catch(MeekroDBException $e) {
             //insert error coz re-submit in same proposal
             $err_message .= "Database Error : " . $e->getMessage() . " ชื่อข้อเสนอโครงการนี้มีอยู่แล้ว<br /><strong>\"".$_POST["title"]."\"</strong>"; // something about duplicate keys
