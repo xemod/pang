@@ -57,7 +57,7 @@ if (!empty($_POST)){ //chk post var
 if(!$err){
     $mail = new PHPMailer;
 
-    $mail->SMTPDebug = 3;                               // Enable verbose debug output
+    //$mail->SMTPDebug = 3;                               // Enable verbose debug output
     $mail->CharSet = "utf-8";
     $mail->isSMTP();
                                  // Set mailer to use SMTP
@@ -156,7 +156,7 @@ if(!$err){
                     <?php
                       echo $mess_mail;
                      ?>
-                     <br />submitted on <?$submittedtime?>
+                     <br />submitted on <?=$submittedtime?>
                   </p>
                 </div>
               </div>
