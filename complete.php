@@ -5,6 +5,7 @@
 
 
 require_once 'meekrodb.php';
+require_once 'PHPMailer/PHPMailerAutoload.php';
 include_once 'config.inc.php';
 
 //Error checking
@@ -39,9 +40,10 @@ if (!empty($_POST)){ //chk post var
           //move no erroor insert database
           try{
             DB::insert('data', $_POST);
+            $submittedtime =
           }catch(MeekroDBException $e) {
             //insert error coz re-submit in same proposal
-            $err_message .= "Database Error : " . $e->getMessage() . " กรุณาติดต่อ สวรส.<br>"; // something about duplicate keys
+            $err_message .= "Database Error : " . $e->getMessage() . " ชื่อข้อเสนอโครงการนี้มีอยู่แล้ว<br /><strong>\"".$_POST["title"]."\"</strong>"; // something about duplicate keys
             $err = true;
           }
         }
@@ -52,15 +54,52 @@ if (!empty($_POST)){ //chk post var
       }
     }
     //mail to user
-    if(!$err){
+if(!$err){
+    $mail = new PHPMailer;
+
+    //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+    $mail->CharSet = "utf-8";
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'mail.hsri.or.th';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = false;                               // Enable SMTP authentication
+    $mail->Username = 'hsri';                 // SMTP username
+    $mail->Password = 'hsri8g1';                           // SMTP password
+    $mail->Port = 25;                                    // TCP port to connect to
+
+    $mail->setFrom('hsri@hsri.or.th');
+    $mail->addAddress($_POST["email"]);     // Add a recipient
+
+    $mail->addReplyTo('hsri@hsri.or.th');
+    $mail->addCC('hsri@hsri.or.th');
+
+
+
+    $mail->isHTML(true);                                  // Set email format to HTML
+
+    $mail->Subject = 'ท่านส่งข้อเสนอโครงการเรียบร้อยแล้ว';
+    $mail->Body    = "เราได้รับข้อเสนอโครงการ \"".$_POST["title"]."\" เรียบร้อยแล้ว<br>โปรดระบุรหัสด้านล่างเมื่อต้องการติดต่อ สวรส.<br><br>
+    code : <strong>".$code."</strong> <br> สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางค์รัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th";
+    $mail->AltBody = "เราได้รับข้อเสนอโครงการ \"".$_POST["title"]."\" เรียบร้อยแล้ว โปรดระบุรหัส เมื่อต้องการติดต่อ สวรส.code : ".$code."  สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางค์รัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th";
+
+    if(!$mail->send()) {
+        $mess_mail = 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+        $mess_mail =  'Message has been sent to '.$_POST["email"];
+    }
+}
+
+
+
+/*    if(!$err){
       $strSubject = "=?UTF-8?B?".base64_encode("ส่งข้อเสนอโครงการเรียบร้อย")."?=";
       $strHeader .= "MIME-Version: 1.0' . \r\n";
       $strHeader .= "Content-type: text/html; charset=utf-8\r\n";
+      $strHeader .= "Cc: hsri@hsri.or.th\r\n";
       $strHeader .= "From: no-reply@hsri.or.th";
       $strMess = "เราได้รับข้อเสนอโครงการ \"".$_POST["title"]."\" เรียบร้อยแล้ว<br>โปรดระบุรหัสด้านล่างเมื่อต้องการติดต่อ สวรส.<br><br>
       code : <strong>".$code."</strong> <br> สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางรัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th";
       mail($_POST['email'],$strSubject, $strMess, $strHeader);
-    }
+    }*/
   }
 
 ?>
@@ -111,6 +150,10 @@ if (!empty($_POST)){ //chk post var
                   <p>
                     ระบบได้รับข้อมูลเรียบร้อยแล้ว<br> โปรดระบุรหัสด้านล่างเมื่อต้องการติดต่อ สวรส.<br><br>
                     code : <strong><?=$code?></strong>
+                    <br/>
+                    <?php
+                      echo $mess_mail;
+                     ?>
                   </p>
                 </div>
               </div>
@@ -125,7 +168,7 @@ if (!empty($_POST)){ //chk post var
   <br>
   <a class="up-arrow" href="#topPage" data-toggle="tooltip" title="TO TOP">
 <span class="glyphicon glyphicon-chevron-up"></span></a><br><br>
-  <p>สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางรัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th</p>
+  <p>สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางค์รัตน์ โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th</p>
   <p class="text-info">power by bootstrap</p>
 </footer>
 </section>
