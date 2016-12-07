@@ -185,7 +185,7 @@ table tr:hover td {
 
               //query
               $results = DB::query("SELECT * FROM data");
-              echo "<table><thead>
+              echo "<table id=\"report\"><thead>
               <tr>
                 <th>#</th>
                 <th>Code</th>
@@ -211,6 +211,7 @@ table tr:hover td {
 
               }
               echo "</tbody></table>";
+              echo "<div class=\"wrapper\"><button class=\"btn btn-primary\" onclick=\"window.location.href='report.php'\">Logout</button></div>";
           //////////////////////////////////////////////////
             }else{
               //echo box password
