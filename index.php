@@ -28,11 +28,94 @@
   		<div class="container-page">
         <div class="panel panel-info">
           <div class="panel-heading"><h3>ข้อมูลและการติดต่อ</h3></div>
-
-       </div>
+          <ul class="list-group">
+              <li class="list-group-item"><span class="glyphicon glyphicon-ok-circle"></span> การส่งข้อเสนอฯ ต้องกรอกฟอร์มให้เรียบร้อยก่อนส่งทั้งแบบออนไลน์และไฟล์เอกสาร</li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-ok-circle"></span> ขนาดไฟล์ข้อเสนอฯ ไม่ควรเกิน <strong class="bg-warning"><span class="glyphicon glyphicon-floppy-disk"></span> 500kb</strong></li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-warning-sign"></span> การส่งข้อเสนอฯ จะสำเร็จเมื่อได้รับอีเมล์ตอบรับจากระบบ ควรใช้อีเมล์ของหน่วยงานในการกรอกข้อมูล</li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-warning-sign"></span> ข้อเสนอฯจะมีเลขประจำตัว(ID) เมื่อติดต่อกับผู้เกี่ยวข้องควรแจ้ง ID ทุกครั้งเพื่อความสะดวก</li>
+              <li class="list-group-item"><span class="glyphicon glyphicon-warning-sign"></span> สอบถามข้อมูลเพิ่มเติมได้ที่ คุณสุรางรัตน์  โทรศัพท์ 02 832 9257 Email surangrat@hsri.or.th หรือคุณพัชราภรณ์ โทรศัพท์ 02 832 9224 Email patcharaporn@hsri.or.th</li>
+          </ul>
+          <div class="panel-heading"><h3>ขั้นตอนที่ 1 </h3></div>
+          <div class="panel-body">
+              <p><strong class="text-warning">(ถ้าท่านเตรียมไฟล์มาเรียบร้อยแล้วไปขั้น<a href="#inputform">ตอนที่ 2</a>)</strong> <br />Download แบบฟอร์ม Proposal จากลิงก์ด้านล่าง กรอกข้อมูลในแบบฟอร์มให้เรียบร้อย แล้วอัพโหลดไฟล์  Proposal กลับเข้ามาในระบบพร้อมทั้งกรอกข้อมูลในแบบฟอร์มออนไลน์ขั้นตอนที่ 2 ให้เรียบร้อย
+              </p>
+               <a onclick="javascript:onDownload()" class="btn btn-info btn-lg" role="button">
+                 <span class="glyphicon glyphicon-download"></span> Download form proposal
+               </a>
+          </div>
+        </div>
 
   			<div class="col-md-6 col-lg-6">
-        sxxxxx
+          <form role="form" action="complete.php" method="post" enctype="multipart/form-data" id="proposalfm">
+  				<h3 id="inputform">ขั้นตอนที่ 2 รายละเอียดโครงการ<Small class="text-danger"> *กรอกข้อมูลให้ครบ</small></h3>
+
+  				<div class="form-group col-lg-12">
+  					<label>ชื่อ-สกุล หัวหน้าโครงการ *</label>
+  					<input type="text" name="name" class="form-control" id="name" value="" required>
+  				</div>
+
+  				<div class="form-group col-lg-6">
+  					<label>หน่วยงาน *</label>
+  					<input type="text" name="workplace" class="form-control" id="workplace" value="" required>
+  				</div>
+
+  				<div class="form-group col-lg-6">
+  					<label>ที่อยู่ส่งไปรษณีย์ *</label>
+  					<input type="text" name="address" class="form-control" id="address" value="" required>
+  				</div>
+
+  				<div class="form-group col-lg-6">
+  					<label>โทรศัพท์มือถือ * 0x-xxxx-xxxx</label>
+  					<input type="text" name="mobilephone" class="form-control" id="mobilephone" value="" placeholder="รูปแบบ 0x-xxxx-xxxx"  required>
+  				</div>
+
+  				<div class="form-group col-lg-6">
+  					<label>อีเมล์ *</label>
+  					<input type="email" name="email" class="form-control" id="email" value=""  required>
+  				</div>
+
+          <div class="col-lg-12 col-md-12">
+              <h4><strog class="text-primary"><span class="glyphicon glyphicon-book"></span> ข้อมูลข้อเสนอโครงการ</strong></h4>
+          </div>
+
+          <div class="form-group col-lg-12">
+            <label>ชื่อโครงการภาษาไทย *</label>
+            <input type="text" name="title" class="form-control" id="title" value=""  required>
+          </div>
+          <div class="form-group col-lg-12">
+            <label>ชื่อโครงการภาษาอังกฤษ *</label>
+            <input type="text" name="etitle" class="form-control" id="etitle" value=""  required>
+          </div>
+          <div class="form-group col-lg-12">
+            <label>หลักการและเหตุผล *</label>
+              <textarea class="form-control custom-control" rows="2" name="reason" id="reason" required></textarea>
+          </div>
+          <div class="form-group col-lg-12">
+            <label>วัตถุประสงค์ *</label>
+            <textarea class="form-control custom-control" rows="2" name="objective" id="objective" required></textarea>
+          </div>
+          <div class="form-group col-lg-12">
+            <label>ประโยชน์ที่คาดว่าจะได้รับ(เลือกได้มากกว่า 1 ข้อ) *</label>
+            <div class="checkbox">
+              <label></label>
+              <input type="checkbox" value="1" name="return1" id="retrun1">1. ด้านนโยบาย
+            </div>
+            <div class="checkbox">
+              <label></label>
+              <input type="checkbox" value="1" name="return2" id="retrun2">2. ด้านสาธารณะ
+            </div>
+            <div class="checkbox">
+              <label></label>
+              <input type="checkbox" value="1" name="return3" id="retrun3">3. ด้านพาณิชย์
+            </div>
+            <div class="checkbox">
+              <label></label>
+              <input type="checkbox" value="1" name="return4" id="retrun4">4. ด้านชุมชนและพื้นที่
+            </div>
+            <div class="checkbox">
+              <label></label>
+              <input type="checkbox" value="1" name="return5" id="retrun5">5. ด้านวิชาการ
+            </div>
         </div>
 
         <div class="form-group  col-lg-12">
