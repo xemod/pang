@@ -112,15 +112,15 @@ table tr:first-child th:last-child {
 }
 table tr {
 	text-align: center;
-	padding-left:20px;
+	padding-left:10px;
 }
 table td:first-child {
 	text-align: left;
-	padding-left:20px;
+	padding-left:10px;
 	border-left: 0;
 }
 table td {
-	padding:18px;
+	padding:13px;
 	border-top: 1px solid #ffffff;
 	border-bottom:1px solid #e0e0e0;
 	border-left: 1px solid #e0e0e0;
@@ -152,11 +152,10 @@ table tr:hover td {
 	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
 	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
 }
-  </style>
+</style>
 </head>
 <body>
   <div class="container-fluid" id="topPage">
-
       <section class="container">
         <div class="page-header">
             <img class="img-responsive" src="logo.png" alt="hsri logo" width="435" height="75" />
@@ -187,9 +186,9 @@ table tr:hover td {
               $results = DB::query("SELECT * FROM data");
               echo "<table id=\"report\"><thead>
               <tr>
-                <th>#</th>
-                <th>Code</th>
-                <th>Title</th>
+                <th width=\"30\">#</th>
+                <th width=\"80\">Code</th>
+                <th width=\"260\">Title</th>
                 <th>Name</th>
                 <th>Tel</th>
                 <th>Email</th>
