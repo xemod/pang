@@ -116,7 +116,7 @@
               <label></label>
               <input type="checkbox" value="1" name="return5" id="retrun5">5. ด้านวิชาการ
             </div>
-            <button type="button" id="testgroup" class="btn btn-md btn-primary" />test</button>
+            <!--<button type="button" id="testgroup" class="btn btn-md btn-primary" />test</button> -->
         </div>
 
         <div class="form-group  col-lg-12">
@@ -131,8 +131,8 @@
         </div>
 
         <div class="form-group col-lg-12">
-          <label>งบประมาณ *</label>
-          <input type="number" name="cost" class="form-control" id="cost" value=""  pattern="[0-9]{10}"  step="100" required>
+          <label>งบประมาณ(เฉพาะตัวเลข) *</label>
+          <input type="number" name="cost" class="form-control" id="cost" value=""   step="100" required>
         </div>
 
 
@@ -281,7 +281,7 @@
               <div class="panel-body"><p class="text-warning">สวรส. ขอสงวนสิทธิรับพิจารณาเฉพาะข้อเสนอโครงการที่มีรายละเอียดครบถ้วนสมบูรณ์ตามที่กำหนดไว้เท่านั้น</p>
               </div>
           </div>
-  				<button type="submit" id="i-submit" class="btn btn-primary btn-lg">ส่งข้อเสนอ!</button>
+  				<button type="button" id="i-submit" class="btn btn-primary btn-lg">ส่งข้อเสนอ!</button>
           <button type="reset" class="btn btn-default btn-lg">ล้างข้อมูล</button>
   			</div>
   		</div>
@@ -291,7 +291,7 @@
       <a class="up-arrow" href="#topPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span></a><br><br>
       <p>ติดต่อ hsri@hsri.or.th โทรศัพท์ 0-2832-9200 แฟกซ์ 0-2832-9201</p>
-      <p class="text-info">power by bootstrap</p>
+      <p class="text-info">power by <a href="https://getbootstrap.com" title="download bootstrap">bootstrap</a> - best with chrome and firefox</p>
     </footer>
   </section>
 </div>

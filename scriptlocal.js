@@ -1,5 +1,5 @@
 function onDownload() {
-	document.location.href = 'https://www.hsri.or.th/sites/all/modules/contrib/pubdlcnt/pubdlcnt.php?file=/sites/default/files/attachment/proposal.docx&nid=7535';
+	document.location.href = '/sites/default/files/attachment/proposal.docx&nid=7535';
 }
 
 $("document").ready(function(){
@@ -15,7 +15,14 @@ $("document").ready(function(){
 			alert($('div.checkbox-group.required :checkbox:checked').length );
 		});
 
-
+		$('#i-submit').click(function() {
+			$(":input[required]").each(function () {
+        if ($("form:first")[0].checkValidity())
+          {
+            $("form:first").submit();
+          }
+        });
+		});
 });
 
 
