@@ -10,6 +10,12 @@ $("document").ready(function(){
 					 $("#proposaldoc").val('');
 				}
     });
+
+		$("#testgroup").click(function(){
+			alert($('div.checkbox-group.required :checkbox:checked').length );
+		});
+
+
 });
 
 

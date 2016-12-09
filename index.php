@@ -94,7 +94,7 @@
             <label>วัตถุประสงค์ *</label>
             <textarea class="form-control custom-control" rows="2" name="objective" id="objective" required></textarea>
           </div>
-          <div class="form-group col-lg-12">
+          <div class="form-group col-lg-12 checkbox-group required ">
             <label>ประโยชน์ที่คาดว่าจะได้รับ(เลือกได้มากกว่า 1 ข้อ) *</label>
             <div class="checkbox">
               <label></label>
@@ -116,6 +116,7 @@
               <label></label>
               <input type="checkbox" value="1" name="return5" id="retrun5">5. ด้านวิชาการ
             </div>
+            <button type="button" id="testgroup" class="btn btn-md btn-primary" />test</button>
         </div>
 
         <div class="form-group  col-lg-12">
